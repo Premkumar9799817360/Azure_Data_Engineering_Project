@@ -134,6 +134,13 @@ Only **relevant columns** are selected and stored in **Delta Table** format insi
 *(The image below shows the Star Schema with relationships between Fact and Dimension Tables.)*  
 ![ADF Pipeline](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Pipeline_workflow.jpg)
 
+📸 **Gold Layer Result**
+> The image below displays the final structure of the **Gold container** in Azure Data Lake.  
+> It contains all the **Dimension tables (dim_branch, dim_date, dim_dealer, dim_model)** and the **FactSales** table stored in Delta format, representing the completed Star Schema model.
+
+![Gold Layer Result](https://github.com/yourusername/yourrepo/blob/main/images/gold_layer_result.jpg)
+
+
 ### 🔹4. Databricks Workflows
 After creating all notebooks, a **Databricks Workflow** is built to **automate the execution sequence**:
 
