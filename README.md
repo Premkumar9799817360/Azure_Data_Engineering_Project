@@ -74,12 +74,12 @@ END;
 📸 ADF Pipeline Design
 The image below shows the complete Azure Data Factory pipeline for data ingestion and incremental data loading.
 
-![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/pipeline_data_ingestion.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/pipeline_data_ingestion.jpg)
 
 📸 ADF Pipeline Execution
 This image represents the successful execution of the ADF pipeline from GitHub to Azure SQL Server and ADLS Gen2.
 
-![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/pipeline_successful_run.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/pipeline_successful_run.jpg)
 
 ### 🔹 2. Data Transformation (Silver Layer)
 In the **Silver Layer**, data transformation is performed using **Azure Databricks** and **PySpark**.  
@@ -94,11 +94,11 @@ The **Unity Catalog** is used for **centralized governance**, **data lineage**, 
 
 #### 📸 Transformed Data Preview
 The table below shows the total units sold per year for different branches.
-![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/table_image_data.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/table_image_data.jpg)
 
 #### 📊 Visualization
 Pie chart showing the percentage of total units sold per branch for a specific year.
-![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/Pie_Chart.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Pie_Chart.jpg)
 
 The transformed data is then saved in Parquet format into the Silver container in ADLS Gen2.
 
@@ -122,7 +122,7 @@ Each **Dimension Table** is updated using **SCD Type-1 (Upsert)** logic:
 
 📸 **SCD Type-1 (Upsert) Example**  
 *(The image below shows how existing records are updated and new records are inserted in Delta Tables.)*  
-![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/SCD_image.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/SCD_image.jpg)
 
 ---
 
@@ -132,13 +132,13 @@ Only **relevant columns** are selected and stored in **Delta Table** format insi
 
 📸 **Star Schema Design**  
 *(The image below shows the Star Schema with relationships between Fact and Dimension Tables.)*  
-![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/star_schema_image.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/star_schema_image.jpg)
 
 📸 **Gold Layer Result**
 > The image below displays the final structure of the **Gold container** in Azure Data Lake.  
 > It contains all the **Dimension tables (dim_branch, dim_date, dim_dealer, dim_model)** and the **FactSales** table stored in Delta format, representing the completed Star Schema model.
 
-![Gold Layer Result](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/gold_layer_result.jpg)
+![Gold Layer Result](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/gold_layer_result.jpg)
 
 
 ### 🔹4. Databricks Workflows
@@ -150,7 +150,7 @@ After creating all notebooks, a **Databricks Workflow** is built to **automate t
 
 📸 **Databricks Workflow**  
 *(The image below illustrates the Databricks Workflow orchestration for the complete Medallion pipeline.)*  
-![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/Learning%20Image/databrick_workflows.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/Azure_Data_Engineering_Project/blob/main/databrick_workflows.jpg)
 
 ### 🔹5. End-to-End ADF Pipeline Integration
 Finally, the **Databricks Notebooks** are integrated into **Azure Data Factory (ADF)** to build a **fully automated and dynamic end-to-end pipeline** that orchestrates the following processes:
